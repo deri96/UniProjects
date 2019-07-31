@@ -1,0 +1,260 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* Parametri dell'header */
+html
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+}
+
+/* Parametri del body */
+body
+{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-color:#2B2B2B;
+	color:#B9B9B9;
+	font-family: "Typewrite";
+	font-size: 110%;
+}
+
+/* Aggiunta del nuovo font */
+@font-face
+{
+	font-family: "Typewrite";
+	src:url("Typewrite.ttf");
+	
+}
+
+@font-face
+{
+	font-family: "Pixel";
+	src:url("Pixel.ttf");
+	
+}
+
+/* Parametri del primo header */
+h1
+{
+	text-align: center;
+	color:#909090;
+	font-family: "Typewrite";
+	font-size: 350%;
+}
+
+/* Parametri del secondo header */
+h2
+{
+	color: #909090;
+	text-decoration: underline;
+}
+
+/*MODIFICA DEGLI ATTRIBUTI DI DIV-----------------------*/
+/* Creazione del contenitore principale del div */
+.divContainer
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Margine sinistro della finestra */
+.divMargineSinistro
+{
+	width: 1%; 
+	height: 100%; 
+	float: left;
+}
+
+/* Corpo della finestra dove saranno presenti i testi */
+.divContainerCorpo
+{
+	width: 84%;
+	height: 100%;
+	display: block;
+	float: left;
+}
+
+.divTesto
+{
+	width: 100%;
+	height: 60%;
+	display: block;
+}
+
+.divScelta
+{
+	width: 100%;
+	height: 40%;
+	display: block;
+}
+
+/* Contenitore del menu della finestra */
+.divContainerMenu
+{
+	width: 15%;
+	height: 100%;
+	display: block;
+	float: right;
+}
+
+/* Margine sinistro del menu della finestra */
+.divContainerMenuMargineSinistro
+{
+	width: 100%;
+	height: 7%;
+	display: block;
+	float: left;
+}
+
+/* Margine destro del menu della finestra */
+.divContainerMenuMargineDestro
+{
+	width: 100%;
+	height: 7%;
+	display: block;
+	float: left;
+}
+
+/* Menu della finestra */
+.divMenu
+{
+	width: 80%;
+	height: 86%;
+	background-color: #0E0E0E;
+	display: block;
+	float: left
+}
+
+/* Contenitore della freccia */
+.divContainerFreccia
+{
+	width: inherit; 
+	height: 70%;
+	display: block;
+}
+
+/* Margine sinistro alla freccia */
+.divMargineSinistroFreccia
+{
+	width: 85%;
+	float: left;
+}
+
+/* Margine destro dove si trova la freccia */
+.divMargineDestroFreccia
+{
+	width: 15%;
+	float: right;
+}
+
+/*------------------------------------------------------------*/
+
+
+/* Parametri del grassetto */
+b
+{
+	color:#808080;
+	text-decoration: underline;
+}
+
+/* Parametri del fieldset */
+fieldset
+{
+	width: 700px;
+	background-color: #514E4F;
+}
+
+/* Parametri del bottone */
+button
+{
+	width: 100px;
+	height: 20px;
+	border-radius: 100%;
+}
+
+/* Parametri del legend */
+legend
+{
+	color: #000000;
+}
+
+/*MODIFICA DEGLI ATTRIBUTI DI RADIOBUTTON ------------------------------------------------------------------*/
+/* Creazione del container dove sono presenti il bottone e i testi */
+.buttonContainer 
+{
+    display: block;
+    position: relative;
+    padding-left: 35px; 
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Nasconde il radio button di default*/
+.buttonContainer input 
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Crea un radio button */
+.buttonCheckmark 
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* Passando il mouse sopra, lo sfondo cambia colore */
+.buttonContainer:hover input ~ .checkmark 
+{
+    background-color: #B1B1B1;
+}
+
+/* Quandoil radiobutton è slezionato, cambia colore */
+.buttonContainer input:checked ~ .checkmark 
+{
+    background-color: #B1B1B1;
+}
+
+/* Crea l'indicatore ovvero il punto */
+.buttonCheckmark:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Seleziona l'indicatore */
+.buttonContainer input:checked ~ .buttonCheckmark:after 
+{
+  display: block;
+}
+
+/* Stilizza l'indicatore */
+.buttonContainer .buttonCheckmark:after 
+{
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #1A1314;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+

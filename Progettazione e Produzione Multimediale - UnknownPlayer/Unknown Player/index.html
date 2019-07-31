@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="html/css/index_style.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="img/icon.png">
+	</head>
+
+	<body onload="autoplay()">
+		<audio id="audioOpening" loop>
+			<source src="audio/Opening.mp3" volume="0.5" muted="false">
+		</audio>
+		<div class="sezioneSinistra">
+			<p id="tit" class="titolo">UnknownPlayer</p>
+			<p id="sottotit" class="sottotitolo">Scegli la tua strada... Gioca ora!</p>
+		</div>
+		
+		<div class="sezioneDestra">
+			<div style="width:100%; height:27vw; display:block; float:left;">
+				<img id= "audioPlay" value="" src="img/pause.png" width="50vw" height="50vw" onClick="setPlay()" 
+				style=" margin-left: 18vw;">
+				<img id= "audioVolume" src="img/volume_on.png" width="50vw" height="50vw" onClick="setMute()" 
+				style=" margin-left: 18vw;">
+			</div>
+			<div style="width:100%; display:block; float:left;">
+				<p id="entra" class="collegamento"><a href="html/menu_iniziale.html">ENTRA=></a></p>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+	
+	<script>
+		var audio = document.getElementById("audioOpening");
+		audio.volume = 0.5;
+		
+		$(document).ready(function(){
+    		setInterval(2000);
+			$("#tit").fadeIn(3000);
+			$("#sottotit").fadeIn(3000);
+			$("#audioVolume").fadeIn(3000);
+        	$("#entra").fadeIn(8000);
+			
+			
+		});
+		
+		function setMute (img)
+		{
+			var aud = document.getElementById("audioOpening");
+			var vol = document.getElementById("audioVolume");
+			
+			
+			
+			if (aud.muted == true)
+			{
+				vol.src = "img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+		
+		function setPlay()
+		{
+			var pause = document.getElementById("audioPlay");
+			if (pause.value == "pause")
+			{
+				audio.play();
+				pause.src = "img/pause.png";
+				pause.value = "play";
+				console.log (pause.value);
+			}
+			else 
+			{
+				audio.pause();
+				pause.src = "img/play.png";
+				pause.value = "pause";
+				console.log (pause.value);
+			}	
+		}
+        
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audioOpening");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+	</script>
+	
+	
+</html>

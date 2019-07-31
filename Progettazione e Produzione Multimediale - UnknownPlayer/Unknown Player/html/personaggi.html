@@ -1,0 +1,269 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="css/personaggi_luoghi.css" type="text/css" rel="stylesheet">
+		<link href="css/guida.css" type="text/css" rel="stylesheet">
+        <link href="css/esci.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="../img/icon.png">
+	</head>
+	
+	<body onload="autoplay()">
+		<audio id="audioMenu" loop>
+			<source src="../audio/I'm Sorry.mp3">
+		</audio>
+		
+		<div class="divFinestra">
+			
+			<div class="divBarraLateraleSx">
+				<div style="height:10%; padding-bottom:20vh"></div>
+				<div style="height:80%;">
+					<a href= "menu_iniziale.html" title="Menu principale">
+						<img src="../img/home.png">
+					</a>
+					<a href= "mappa_personaggi.html" title="Mappa del sito" >
+						<img src="../img/map.png">
+					</a>
+					<a href= "guida_personaggi.html" title="Guida della pagina">
+						<img src="../img/help.png">
+					</a>
+					<a href= "#" class = "popup" title="Esci da UnknownPlayer" onclick="showExit ()">
+						<img src="../img/exit.png">
+                        <span class="popuptext" id="popupExit" style="display:block;">
+                            Sei sicuro di voler uscire?<br>
+                            <button class="exit" onclick="window.location.href='../index.html'">Si</button>
+                            <button class="exit" title="Rimani alla pagina">No</button>
+                        </span>
+					</a>
+				</div>
+				<div style="height:10%; padding-bottom:30vh"></div>
+			</div>
+				
+			<div class="divPrincipale">
+				<div class="indietroImg">
+					<a href="personaggi_luoghi.html">
+						<img src ="../img/dietroBianco.png" title="Torna al menu dei personaggi e dei luoghi">
+					</a>
+				</div>
+				
+				<div style="top:10%; bottom:90%; padding-left:22vw;  color:white; font-family:Typewrite; font-size:4vw;">	
+					Personaggi del gioco
+				</div>
+				
+				<div>
+					
+					<div id="detective" class="tabcontent">
+						<h2>Il detective</h2>
+						<b>
+							Il detective è il personaggio che l'utente impersonificherà. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/detective.png"><br>
+							E' colui che si occuperà del caso, analizzando i vari indizi ed interrogando
+							i diversi sospettati.
+						</b>
+					</div>
+					<div id="wilson" class="tabcontent">
+						<h2>Agente Wilson</h2>
+						<b>
+							L'agente Wilson è colui che aiuterà il detective nel caso. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/wilson.png"><br>
+							E' un uomo deciso ma gentile, pronto ad aiutare il prossimo. All'interno della polizia 
+							ce ne doverbbero essere di più come lui.<br>
+							Sarà il principale aiutante dell'utente, sebbene anche per lui il caso è molto contorto.<br>
+							Se hai estrema necessità, chiedi a lui.
+						</b>
+					</div>
+					<div id="lavinia" class="tabcontent">
+						<h2>Lavinia Weir</h2>
+						<b>
+							Lavinia Weir è una delle sospettate dell'omicidio. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/lavinia.png"><br>
+							E' la moglie dell'uomo assassinato, Horace Caine.<br>
+							E' una donna risoluta e molto forte, ha dovuto crescere i suoi figli da sola,
+							date le prolungate assenze del marito per viaggi di affari.<br>
+							Nonostante ciò, a sua detta, lo ha sempre amato e continuerà a farlo.
+						</b>
+					</div>
+					<div id="sepp" class="tabcontent">
+						<h2>Sepp Jaytene</h2>
+						<b>
+							Sepp Jaytene è uno dei sospettati dell'omicidio. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/sepp.png"><br>
+							E' stato in passato il contabile che si occupava di registrare tutti i numeri dell'impero 
+							di Horace Caine, l'uomo assassinato brutalmente.<br>
+							Venne licenziato in tronco quando una sua azione illegale sui conti di Caine venne 
+							scoperta dagli ispettori del fisco.<br>
+							Da allora non è riuscito a trovare nessuno che lo assumesse.
+						</b>
+					</div>
+					<div id="valentine" class="tabcontent">
+						<h2>Valentine Locke</h2>
+						<b>
+							Valentine Locke è una delle sospettate dell'omicidio. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/valentine.png"><br>
+							E' la segretaria del signor Caine, colei che gestisce gli apputamenti di lavoro e le
+							varie chiamate dirette per l'imprenditore al suo ufficio.<br>
+							Scaltra e testarda, tutti sanno che è innamorata dell'uomo d'affari. E si sa bene 
+							quanto sia pericolosa una donna pazza innamorata...
+						</b>
+					</div>
+					<div id="frank" class="tabcontent">
+						<h2>Frank Fournite</h2>
+						<b>
+							Frank Fournite è uno dei sospettati dell'omicidio. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/frank.png"><br>
+							E' l'ex socio in affari di Horace Caine, l'uomo assassinato.<br>
+							E' un tipo goliardico, a cui piace molto scherzare, ma che è sempre pronto all'ira
+							e alla rissa, soprattutto dopo aver bevuto.<br>
+							Il suo rapporto con Caine si è concluso poco tempo fa in modo distruttivo. Soprattutto
+							per la macchina di Horace...
+						</b>
+					</div><div id="rew" class="tabcontent">
+						<h2>ND Rew</h2>
+						<b>
+							ND Rew è uno dei sospettati dell'omicidio. Apparirà nella seguente figura:<br>
+							<img class="personaggi" src="../img/personaggi/ND Rew.png"><br>
+							E' l'androide da compagnia del signor Caine.<br>
+							E' uno dei primi esemplari di androide con cervello positronico Nexus6, prototipo di
+							nuovissima generazione.<br>
+							Sembra che abbia sviluppato dei sentimenti, cosa incredibile per un robot. E
+							chissà dove potrebbero spingersi, a questo punto...
+						</b>
+					</div>
+					<div id="caine" class="tabcontent">
+						<h2>Horace Caine</h2>
+						<b>
+							Horace Caine è la vittima dell'omicidio. Apparirà solo nel livello 2, quando verrà 
+							trovato senza vita in una sua vecchia fabbrica.<br><br><br>
+							Miliardario, filantropo e grande imprenditore, in città <br>
+							è conosciutissimo per il suo impegno sociale e per la sua gentilezza.<br>
+							Chi può davvero volere che un uomo del genere muoia?
+						</b> 
+					</div>
+					<div id="moras" class="tabcontent">
+						<h2>J. Gordon</h2>
+						<b>
+							J. Gordon è il commissario della polizia della città. Non apparirà mai fisicamente nel 
+							gioco ma sarà comunque presente.<br><br><br>
+							E' un uomo duro, di altri tempi.<br>
+							In passato ha combattuto il crimine organizzato presente nella città
+							usando la linea dura, sconfiggendolo definitivamente. <br>
+							E' una sorta di eroe, sebbene molta gente preferisce dare il merito delle sue 
+							imprese ad un certo vigilante oscuro che si traveste da topo volante...
+						</b> 
+					</div>
+					
+					<div class="tab">
+						<button class="tablinks" onclick="openCity(event, 'detective')" id="defaultOpen"><b>Il detective</b></button>
+						<button class="tablinks" onclick="openCity(event, 'wilson')"><b>Agente Wilson</b></button>
+						<button class="tablinks" onclick="openCity(event, 'lavinia')"><b>Lavinia Weir</b></button>
+						<button class="tablinks" onclick="openCity(event, 'sepp')"><b>Sepp Jaytene</b></button>
+						<button class="tablinks" onclick="openCity(event, 'valentine')"><b>Valentine Locke</b></button>
+						<button class="tablinks" onclick="openCity(event, 'frank')"><b>Frank Fournite</b></button>
+						<button class="tablinks" onclick="openCity(event, 'rew')"><b>ND Rew</b></button>
+						<button class="tablinks" onclick="openCity(event, 'caine')"><b>Horace Caine</b></button>
+						<button class="tablinks" onclick="openCity(event, 'moras')"><b>J. Gordon</b></button>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+	
+			<div class="divBarraLateraleDx">
+				<div style="height:10%; padding-bottom:15vh"></div>
+				<div style="height:80%;">
+					<a>
+						<img src="../img/pause.png" id="play" onclick="setPlay()" title = "Pausa">
+					</a>
+					<a title="Volume" >
+						<img src="../img/volume_on.png" id="Volume" onclick="setMute()">
+					</a>
+					<a href= "#" ><img src="../img/eggNo.png"></a>
+					<a href= "#" ><img src="../img/comandiNo.png"></a>
+					<a href= "#" ><img src="../img/creditiNo.png"></a>
+				</div>
+				<div style="height:10%; padding-bottom:25vh"></div>
+			</div>
+		</div>	
+		
+	</body>
+	<script>
+		var audio = document.getElementById("audioMenu");
+		audio.volume = 0.2;
+		
+		function setMute ()
+		{
+			var aud = document.getElementById("audioMenu");
+			var vol = document.getElementById("Volume");
+			
+			if (aud.muted == true)
+			{
+				vol.src = "../img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "../img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+		
+		function setPlay()
+		{
+			var pause = document.getElementById("play");
+			if (pause.value == "pause")
+			{
+				audio.play();
+				pause.src = "../img/pause.png";
+				pause.value = "play";
+				pause.title = "Pausa";
+				console.log (pause.value);
+			}
+			else 
+			{
+				audio.pause();
+				pause.src = "../img/play.png";
+				pause.value = "pause";
+				pause.title = "Play";
+				console.log (pause.value);
+			}	
+		}
+	
+		function openCity(evt, cityName) 
+		{
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) 
+			{
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) 
+			{
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		document.getElementById("defaultOpen").click();
+	
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audioMenu");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+        
+        function showExit () 
+        {
+            var popup = document.getElementById("popupExit");
+            popup.classList.toggle("show");
+        }
+	</script>
+	
+</html>

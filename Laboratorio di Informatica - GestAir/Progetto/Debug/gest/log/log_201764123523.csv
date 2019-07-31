@@ -1,8 +1,0 @@
--------File di log delle attività svolte-------
-In sequenza: codice del volo, partenza/arrivo, codice IATA dell'aeroporto, data effettiva(*), ora effettiva(*),  gate(*)
-I campi indicati con (*) potrebbero essere stati soggetti a cambiamenti.
-
-M45230,a,BBU,01/06/2017,08:47,A1,emergenza,non autorizzato;
-FR7070,A,FCO,01/06/2017,12:39,A3,autorizzato;
-AZ8991,P,FCO,-/-/-,-:-,-,cancellato;
-BA4501,a,LGK,01/06/2017,18:40,A3,emergenza,autorizzato;

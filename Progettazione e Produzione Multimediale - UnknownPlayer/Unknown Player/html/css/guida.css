@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family: "Typewrite";
+	src:url("Typewrite.ttf");
+	
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+
+body
+{
+	overflow: hidden;
+	width: 100vw;
+	height:100hw;
+	background-color: #666666;
+}
+
+.divImg img
+{
+	overflow: hidden; 
+	display:block; 
+	width:99vw; 
+	height:89vh;
+	padding-bottom:1vh;
+	
+	position:center;
+}
+
+.indietroImg
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	float: left;
+	padding-top: 1vh;
+	padding-left: 2vw;
+}
+
+.indietroImg img
+{
+	overflow: hidden; 
+	display:block; 
+	width:4vw; 
+	height:8vh;
+	
+	position:center;
+}
+
+.avantiImg
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	float: right;
+	padding-top: 1vh;
+	padding-right: 2vw;
+}
+
+.avantiImg img
+{
+	overflow: hidden; 
+	display:block; 
+	width:4vw; 
+	height:8vh;
+	
+	position:center;
+}

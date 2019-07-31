@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+* 
+{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+a 
+{
+	text-decoration:none;
+	color: black;
+}
+
+
+
+body
+{
+	width: 100%;
+	height:100%;
+	/*background-color: gray;*/
+	background-image: url("../../img/skyline.jpg");
+	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+	
+	background-size: 100%;	
+}
+
+.collegamento
+{
+	display: none;
+	font-family: "Typewrite";
+	font-size: 6vw;
+	text-decoration: none;
+}
+
+.titolo
+{
+	display: none;
+	font-family: "Typewrite";
+	font-size: 8vw;
+}
+
+.sottotitolo
+{
+	display: none;
+	font-size: 3vw;
+	font-family: "Typewrite";
+}
+
+.sezioneDestra
+{
+	float:left;
+	width:25%;
+}
+
+.sezioneSinistra
+{
+	float:left;
+	width: 75%;
+}
+
+@font-face
+{
+	font-family: "Typewrite";
+	src:url("Typewrite.ttf");
+	
+}
+

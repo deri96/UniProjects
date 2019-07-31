@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family: "Typewrite";
+	src:url("Typewrite.ttf");
+	
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+body
+{
+	overflow: hidden;
+	width: 100vw;
+	height:100hw;
+	background-image: url("../../img/background.jpg");
+	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+	
+	background-size: cover;	
+}
+
+
+
+/* Div della finestra principale */
+.divFinestra
+{
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	display: block;
+}
+.divBarraLateraleDx
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	background-color: #666666;
+	float: left;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1vw;
+	
+}
+
+.divBarraLateraleDx img
+{
+    display: block;
+    text-align: center;
+    padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1.4vw;
+	padding-right: 1vw;
+    transition: all 1.0s ease;
+    color: white;
+	width:80%;
+	height:80%;
+	align:center;
+}
+
+.divBarraLateraleDx img:hover
+{
+	
+	background-color: #505050;
+}
+
+.divBarraLateraleSx
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	background-color: #666666;
+	float: left;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1vw;
+}
+
+.divBarraLateraleSx img
+{
+    display: block;
+    text-align: center;
+    padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1.4vw;
+	padding-right: 1vw;
+    transition: all 1.0s ease;
+    color: white;
+	width:80%;
+	height:80%;
+	align:center;
+}
+
+.divBarraLateraleSx img:hover
+{
+	
+	background-color: #505050;
+}
+
+.divPrincipale
+{
+	width: 83%;
+	height: inherit;
+	display: block;
+	float: left;
+}
+
+.divGioca
+{
+	float: left; 
+	padding-left: 27vw;
+	
+	padding-top: 3vh;	
+	
+}
+
+.divGioca img
+{
+	display: block;
+    text-align: center;
+    transition: all 1.0s ease;
+    color: white;
+	width:30vw;
+	height:25vh;
+	font-family: "Typewrite";
+
+}
+
+
+.overlay 
+{
+  position: absolute;  
+  height:0;
+  background-color: #666666;
+  overflow: hidden;
+  transition: 0.8s ease;
+}
+
+.containerImg 
+{
+	width:30vw;
+	height:25vh;
+	border-style: solid;
+    border-width: 1vw;
+	border-radius: 3vw;
+	border-color: black;
+	background-color: #666666;
+	text-align:center;
+	
+}
+
+.containerImg2
+{
+	width:30vw;
+	height:18vh;
+	border-style: solid;
+    border-width: 1vw;
+	border-radius: 2vw;
+	border-color: black;
+	background-color: #666666;
+	text-align:center;
+}
+
+.containerImg:hover .overlay 
+{
+	width:27vw;
+	height:21vh;
+	border-radius: 2vw;
+	border-color: black;
+}
+.containerImg2:hover .overlay 
+{
+	width:28vw;
+	height:14vh;
+	
+    
+	border-radius: 1vw;
+	border-color: black;
+}
+
+.textMenu
+{
+	font-size: 3vw;
+	font-family: "Typewrite";
+	text-align:justify;
+}
+
+.text 
+{
+  white-space: nowrap; 
+  color: black;
+  font-size: 2vw;
+  font-family:"Typewrite";
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.divAltreScelte
+{
+	float: left; 
+	padding-left: 27vw;
+	padding-top: 2vh;	
+	
+}
+
+.divAltreScelte img
+{
+	display: block;
+    text-align: center;
+    transition: all 1.0s ease;
+    color: white;
+	width:30vw;
+	height:18vh;
+	font-family: "Typewrite";
+}
+
+

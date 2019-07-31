@@ -1,0 +1,148 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="css/trama_regole.css" type="text/css" rel="stylesheet">
+		<link href="css/guida.css" type="text/css" rel="stylesheet">
+        <link href="css/esci.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="../img/icon.png">
+	</head>
+	
+	<body onload="autoplay()">
+		<audio id="audioMenu" loop>
+			<source src="../audio/Alone Man.mp3">
+		</audio>
+		
+		<div class="divFinestra">
+			
+			<div class="divBarraLateraleSx">
+				<div style="height:10%; padding-bottom:20vh"></div>
+				<div style="height:80%;">
+					<a href= "menu_iniziale.html" title="Menu principale">
+						<img src="../img/home.png">
+					</a>
+					<a href= "mappa_regole2.html" title="Mappa del sito" >
+						<img src="../img/map.png">
+					</a>
+					<a href= "guida_regole2.html" title="Guida della pagina">
+						<img src="../img/help.png">
+					</a>
+					<a href= "#" class = "popup" title="Esci da UnknownPlayer" onclick="showExit ()">
+						<img src="../img/exit.png">
+                        <span class="popuptext" id="popupExit" style="display:block;">
+                            Sei sicuro di voler uscire?<br>
+                            <button class="exit" onclick="window.location.href='../index.html'">Si</button>
+                            <button class="exit" title="Rimani alla pagina">No</button>
+                        </span>
+					</a>
+				</div>
+				<div style="height:10%; padding-bottom:30vh"></div>
+			</div>
+				
+			<div class="divPrincipale">
+				<div class="indietroImg">
+					<a href="regole.html">
+						<img src ="../img/dietroBianco.png" title="Pagina 1">
+					</a>
+				</div>
+				<div class="avantiImg">
+					<a href="#">
+						<img src ="../img/avantiNo.png">
+					</a>
+				</div>
+				<div style="top:10%; bottom:90%; padding-left:24vw; color:white; font-family:Typewrite; font-size:4vw;">	
+					Regole del gioco
+				</div>
+				<div class="divTesto">
+					Ogni livello avrà un determinato tempo di gioco massimo entro il quale bisognerà trovare
+					gli indizi necessari ed uscire dalla missione in corso acquisendo il maggior numero possibile
+					di informazioni.<br>
+					Il tempo sarà sempre minore con il passare dei livelli, accrescendo sempre più la difficoltà
+					nella risoluzione del mistero.<br>
+					Se il tempo a disposizione scade, la partità termina e l'utente perde automaticamente,
+					nonostante stesse prendendo la strada giusta per la risoluzione dell'enigma.<br><br>
+					Questo perchè UnknownPlayer incentiva l'utente a non fermarsi solo ad una singola partita, anzi
+					tenta di motivare maggiormente ad un esperienza di gioco prolungata.<br><br>
+					pag 2/2
+				</div>
+			</div>
+	
+			<div class="divBarraLateraleDx">
+				<div style="height:10%; padding-bottom:15vh"></div>
+				<div style="height:80%;">
+					<a>
+						<img src="../img/pause.png" id="play" onclick="setPlay()" title = "Pausa">
+					</a>
+					<a title="Volume" >
+						<img src="../img/volume_on.png" id="Volume" onclick="setMute()">
+					</a>
+					<a href= "#" ><img src="../img/eggNo.png"></a>
+					<a href= "#" ><img src="../img/comandiNo.png"></a>
+					<a href= "#" ><img src="../img/creditiNo.png"></a>
+				</div>
+				<div style="height:10%; padding-bottom:25vh"></div>
+			</div>
+		</div>	
+		
+	</body>
+	<script>
+		var audio = document.getElementById("audioMenu");
+		audio.volume = 0.2;
+		
+		function setMute ()
+		{
+			var aud = document.getElementById("audioMenu");
+			var vol = document.getElementById("Volume");
+			
+			if (aud.muted == true)
+			{
+				vol.src = "../img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "../img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+		
+		function setPlay()
+		{
+			var pause = document.getElementById("play");
+			if (pause.value == "pause")
+			{
+				audio.play();
+				pause.src = "../img/pause.png";
+				pause.value = "play";
+				pause.title = "Pausa";
+				console.log (pause.value);
+			}
+			else 
+			{
+				audio.pause();
+				pause.src = "../img/play.png";
+				pause.value = "pause";
+				pause.title = "Play";
+				console.log (pause.value);
+			}	
+		}
+        
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audioMenu");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+        
+        function showExit () 
+        {
+            var popup = document.getElementById("popupExit");
+            popup.classList.toggle("show");
+        }
+	</script>
+	
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>UnknownPlayer</title>
+		<link href="style.css" type="text/css" rel="stylesheet">
+        <link href="esci.css" type="text/css" rel="stylesheet">
+        <link rel="icon" href="../../img/icon.png">
+	</head>
+
+	<body style="overflow: hidden">
+        <audio id="audiolevel" loop>
+            <source src="../../audio/Art of Silence.mp3">
+        </audio>
+		<canvas id = "canvas" width = "800px" height = "450px"  style = "border: 1px solid #000000; margin-left: auto; margin-right: auto; display: block;"></canvas>
+        <canvas id = "timer" width = "800px" height = "20px"  style = "border: 1px solid #000000; margin-left: auto; margin-right: auto; display: block; background-color: black;"></canvas>
+        
+        <a href= "../../html/menu_iniziale.html" title="Menu principale" style = "margin-left: 25vw; text-decoration: none;">
+            <img src="../../img/home.png" style="width: 7vh;">
+        </a>
+		<a href= "#" class = "popup" title="Esci da UnknownPlayer" onclick="showExit ()" style = "margin-left: 5vw; margin-top: 0.6vh; text-decoration: none;">
+            <img src="../../img/exit.png" style="width: 6vh;">
+            <span class="popuptext" id="popupExit" style="display:block;">
+                Sei sicuro di voler uscire?<br>
+                <button class="exit" onclick="window.location.href='../../index.html'">Si</button>
+                <button class="exit" title="Rimani alla pagina">No</button>
+            </span>
+        </a>
+        <a style="margin-left: 42vw; text-decoration: none;" >
+            <img src="../../img/volume_on.png" style = "width: 7vh;" id="Volume" onclick="setMute()" title="Volume">
+        </a>
+	</body>
+
+	<script src = "../js/Object.js"> </script>
+	<script src = "../js/drawingFunctions.js"> </script>
+	<script src = "../js/movement.js"> </script>
+	<script src = "../js/Entity.js"> </script>
+	<script src = "../js/levels/level_10_win.js"> </script>
+	<script>
+		
+        var ch;
+        ch = setInterval(update, 50);
+        
+        //funzioni per la barra inferiore
+        var audio = document.getElementById("audiolevel");
+		audio.volume = 0.2;
+		
+		function setMute ()
+		{
+			var aud = document.getElementById("audiolevel");
+			var vol = document.getElementById("Volume");
+			
+			if (aud.muted == true)
+			{
+				vol.src = "../../img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "../../img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+        
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audiolevel");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+        
+        function showExit () 
+        {
+            var popup = document.getElementById("popupExit");
+            popup.classList.toggle("show");
+        }
+	</script>
+	
+</html>

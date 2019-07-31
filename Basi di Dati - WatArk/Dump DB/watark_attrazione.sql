@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+--
+-- Host: localhost    Database: watark
+-- ------------------------------------------------------
+-- Server version	8.0.16
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `attrazione`
+--
+
+DROP TABLE IF EXISTS `attrazione`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `attrazione` (
+  `Nome` varchar(50) NOT NULL,
+  `Latitudine` decimal(12,10) DEFAULT NULL,
+  `Longitudine` decimal(13,10) DEFAULT NULL,
+  `AltezzaMinima` int(11) DEFAULT NULL,
+  `EtaMinima` int(11) DEFAULT NULL,
+  `Estrema` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Nome`),
+  KEY `Attrazione_IDX` (`Nome`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `attrazione`
+--
+
+LOCK TABLES `attrazione` WRITE;
+/*!40000 ALTER TABLE `attrazione` DISABLE KEYS */;
+INSERT INTO `attrazione` VALUES ('A pranzo con i delfini',41.1204723000,16.8669443000,100,8,0),('Abborda la nave',41.1204723300,16.8669449010,160,14,1),('Acchiappa il polpo!',NULL,NULL,NULL,8,0),('Baia degli squali',NULL,NULL,NULL,NULL,0),('Barche da scontro',41.1204720000,16.8669430000,145,18,1),('Casa dei quiz',41.1204724000,16.8669446000,NULL,NULL,0),('Cinema acquatico',41.1204728600,16.8669443400,NULL,NULL,0),('Gioca con i pesci',41.1204721700,16.8669442000,100,4,0),('Habitat caraibico',41.1204721100,16.8669444000,NULL,NULL,0),('Habitat degli squali',41.1204726000,16.8669447100,NULL,NULL,0),('Habitat degli uccelli marini',41.1204724300,16.8669441030,NULL,NULL,0),('Habitat dei delfini',41.1204722000,16.8669443000,NULL,NULL,0),('Habitat dei pinguini',41.1204721120,16.8669440100,NULL,NULL,0),('Habitat del Pacifico',41.1204724670,16.8669448300,NULL,NULL,0),('Habitat dell\'Atlantico',41.1204723330,16.8669442000,NULL,NULL,0),('Habitat delle foche',41.1204721000,16.8669443000,NULL,NULL,0),('Habitat delle orche',41.1204724300,16.8669443000,NULL,NULL,0),('I Signori del Mare',41.1204722000,16.8669449000,NULL,NULL,0),('Imparare a nuotare con i delfini',NULL,NULL,100,8,0),('Le isole più belle del mondo',41.1204720030,16.8669448000,NULL,NULL,0),('Megalodon & Co',41.1204720100,16.8669447100,NULL,NULL,0),('Montagne russe acquatiche',41.1204723200,16.8669441100,145,18,1),('Museo del mare',41.1204724000,16.8669445600,NULL,NULL,0),('Pallanuoto',41.1204728000,16.8669444330,160,18,1),('Pirati e Capitani',41.1204723000,16.8669443000,NULL,NULL,0),('Salva il mare',41.1204729000,16.8669446300,100,8,0),('Sfida la paura',41.1204721200,16.8669440900,160,18,1),('Snorkeling',41.1204723000,16.8669444300,145,18,1),('Storia degli oceani',41.1204723000,16.8669444400,NULL,NULL,0),('Tour oceanico',41.1204721000,16.8669443000,100,8,0),('Tronchi in fiume',41.1204721200,16.8669443000,145,18,1),('Trova il tesoro',41.1204721100,16.8669446400,NULL,NULL,0),('Vecchio molo infestato',NULL,NULL,NULL,NULL,0),('Viaggio nella vasca delle orche',41.1204720000,16.8669443000,145,14,1);
+/*!40000 ALTER TABLE `attrazione` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-07-29 14:36:05

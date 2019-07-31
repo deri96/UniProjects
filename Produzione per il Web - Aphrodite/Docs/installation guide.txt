@@ -1,0 +1,22 @@
+ASD_Aphodite è un software di gestione per una associazione sportiva dilettantistica.
+
+1)Requisiti
+Piattaforma testata su Windows 10 (x64).
+
+- O. Windows(x86/x64)
+- Composer ultima versione
+- UwAmp ultima versione
+
+2)Installazione in Windows (se si utilizza UwAmp, versione portatile di Xampp)
+
+Entrare nella sottocartella UwAmp ed eseguire come amministratore il file UwAmp.exe
+Il webserver apache e mysql vengono avviati automaticamente dal gestore UwAmp. (In alternativa, 
+si clicca sul bottone "start" dell'interfaccia utente alla voce "server")
+ASD_Aphrodite è già installato nel webserver.
+Cliccare sul bottone "Browser www", cliccare su "ASD_Aphrodite" e successivamente "public".
+N.B.: Eventuali altri processi di servizi dbms (per esempio: mysql workbench) devono essere interrotti per non incorrere in conflitti con UwAmp.
+
+
+3) Esecuzione
+Si suggerisce l'uso del browser Google Chrome, ultima versione. 
+La homepage del sito si trova all'indirizzo: localhost/ASD_Aphrodite/public.

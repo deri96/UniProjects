@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family: "Typewrite";
+	src:url("Typewrite.ttf");
+	
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+
+body
+{
+	overflow: hidden;
+	width: 100vw;
+	height:100hw;
+	background-image: url("../../img/background.jpg");
+	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center;
+	
+	background-size: cover;	
+}
+
+.divFinestra
+{
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	display: block;
+}
+
+
+.divBarraLateraleDx
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	background-color: #666666;
+	float: left;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1vw;
+	
+}
+
+.divBarraLateraleDx img
+{
+    display: block;
+    text-align: center;
+    padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1.4vw;
+	padding-right: 1vw;
+    transition: all 1.0s ease;
+    color: white;
+	width:80%;
+	height:80%;
+	align:center;
+}
+
+.divBarraLateraleDx img:hover
+{
+	
+	background-color: #505050;
+}
+
+.divBarraLateraleSx
+{
+	width: 8%;
+	height: inherit;
+	display: block;
+	background-color: #666666;
+	float: left;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1vw;
+}
+
+.divBarraLateraleSx img
+{
+    display: block;
+    text-align: center;
+    padding-top: 3vh;
+	padding-bottom: 3vh;
+	padding-left: 1.4vw;
+	padding-right: 1vw;
+    transition: all 1.0s ease;
+    color: white;
+	width:80%;
+	height:80%;
+	align:center;
+}
+
+.divBarraLateraleSx img:hover
+{
+	
+	background-color: #505050;
+}
+
+.divPrincipale
+{
+	width: 83%;
+	height: inherit;
+	display: block;
+	float: left;
+}
+
+.divTesto
+{
+	padding-top:10vh; 
+	padding-left:10vw; 
+	padding-right:10vw; 
+	padding-bottom:10vh; 
+	color:white; 
+	font-family:"Typewrite"; 
+	font-size:2vw; 
+	text-align:justify;
+}
+

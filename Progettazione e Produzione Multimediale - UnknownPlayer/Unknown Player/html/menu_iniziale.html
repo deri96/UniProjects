@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="css/menu_iniziale.css" type="text/css" rel="stylesheet">
+        <link href="css/esci.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="../img/icon.png">
+	</head>
+	
+	<body onload="autoplay()">
+		<audio id="audioMenu" loop>
+			<source src="../audio/Calm.mp3">
+		</audio>
+		<div class="divFinestra">
+			
+			<div class="divBarraLateraleSx">
+				<div style="height:10%; padding-bottom:20vh"></div>
+				<div style="height:80%;">
+					<a href= "menu_iniziale.html" title="Menu principale">
+						<img src="../img/home.png">
+					</a>
+					<a href= "mappa_homepage.html" title="Mappa del sito" >
+						<img src="../img/map.png">
+					</a>
+					<a href= "guida_menu_principale.html" title="Guida della pagina" style="z-index: 1;">
+						<img src="../img/help.png">
+					</a>
+					<a href= "#" class = "popup" title="Esci da UnknownPlayer" onclick="showExit ()">
+						<img src="../img/exit.png">
+                        <span class="popuptext" id="popupExit" style="display:block;">
+                            Sei sicuro di voler uscire?<br>
+                            <button class="exit" onclick="window.location.href='../index.html'">Si</button>
+                            <button class="exit" title="Rimani alla pagina">No</button>
+                        </span>
+					</a>
+				</div>
+				<div style="height:10%; padding-bottom:30vh"></div>
+			</div>
+				
+			<div class="divPrincipale">
+				<div style="top:10%; bottom:90%; padding-left:28vw; color:white; font-family:Typewrite; font-size:4vw;">	
+					UnknownPlayer 
+				</div>
+				<div class="divGioca">
+					<a href= "../game/level/level_01.html">
+						<div class="containerImg">
+							<div class="overlay">
+								<div class="text">
+									<b>Inizia l'avventura<br>e risolvi l'enigma!</b>
+								</div>
+							</div>
+							<b class="textMenu" style=" font-size:4vw;">
+								INIZIA A <br> GIOCARE!
+							</b>	
+						</div>
+					</a>
+				</div>
+				<div class="divAltreScelte">
+					<a href= "trama.html">
+						<div class="containerImg2">
+							<div class="overlay">
+								<div class="text">
+									<b>Scopri la trama<br>del racconto!</b>
+								</div>
+							</div>
+							<b class="textMenu" style=" font-size:3vw;">
+								TRAMA <br> DELLA STORIA
+							</b>	
+						</div>
+					</a>	
+				</div>
+				<div class="divAltreScelte">
+					<a href= "personaggi_luoghi.html">
+						<div class="containerImg2">
+							<div class="overlay">
+								<div class="text">
+									<b>Scopri i personaggi e <br>i luoghi principali!</b>
+								</div>
+							</div>
+							<b class="textMenu">
+								PERSONAGGI <br> E LUOGHI
+							</b>
+						</div>
+					</a>
+					
+				</div>
+				<div class="divAltreScelte">
+					<a href= "regole.html">
+						<div class="containerImg2">
+							<div class="overlay">
+								<div class="text">
+									<b>Impara le regole<br>del gioco!</b>
+								</div>
+							</div>
+							<b class="textMenu">
+								REGOLE <br> DEL GIOCO
+							</b>
+						</div>
+					</a>	
+				</div>
+			</div>
+			
+			<div class="divBarraLateraleDx">
+				<div style="height:10%; padding-bottom:15vh"></div>
+				<div style="height:80%;">
+					<a>
+						<img src="../img/pause.png" id="play" onclick="setPlay()" title = "Pausa">
+					</a>
+					<a title="Volume" >
+						<img src="../img/volume_on.png" id="Volume" onclick="setMute()">
+					</a>
+					<a href= "easter_egg.html" title="Easter eggs"><img src="../img/egg.png"></a>
+					<a href= "comandi_gioco.html" title="Comandi di gioco"><img src="../img/comandi.png"></a>
+					<a href= "crediti_gioco.html" title="Crediti di gioco"><img src="../img/crediti.png"></a>
+				</div>
+				<div style="height:10%; padding-bottom:25vh"></div>
+			</div>
+			
+	
+		</div>
+	
+	</body>
+	
+	<script>
+		var audio = document.getElementById("audioMenu");
+		audio.volume = 0.2;
+		
+		function setMute ()
+		{
+			var aud = document.getElementById("audioMenu");
+			var vol = document.getElementById("Volume");
+			
+			if (aud.muted == true)
+			{
+				vol.src = "../img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "../img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+		
+		function setPlay()
+		{
+			var pause = document.getElementById("play");
+			if (pause.value == "pause")
+			{
+				audio.play();
+				pause.src = "../img/pause.png";
+				pause.value = "play";
+				pause.title = "Pausa";
+				console.log (pause.value);
+			}
+			else 
+			{
+				audio.pause();
+				pause.src = "../img/play.png";
+				pause.value = "pause";
+				pause.title = "Play";
+				console.log (pause.value);
+			}	
+		}
+        
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audioMenu");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+        
+        function showExit () 
+        {
+            var popup = document.getElementById("popupExit");
+            popup.classList.toggle("show");
+        }
+	</script>
+</html>
+

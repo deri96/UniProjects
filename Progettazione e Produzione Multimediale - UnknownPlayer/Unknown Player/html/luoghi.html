@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="css/personaggi_luoghi.css" type="text/css" rel="stylesheet">
+		<link href="css/guida.css" type="text/css" rel="stylesheet">
+        <link href="css/esci.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="../img/icon.png">
+	</head>
+	
+	<body onload="autoplay()">
+		<audio id="audioMenu" loop>
+			<source src="../audio/I'm Sorry.mp3">
+		</audio>
+		
+		<div class="divFinestra">
+			
+			<div class="divBarraLateraleSx">
+				<div style="height:10%; padding-bottom:20vh"></div>
+				<div style="height:80%;">
+					<a href= "menu_iniziale.html" title="Menu principale">
+						<img src="../img/home.png">
+					</a>
+					<a href= "mappa_luoghi.html" title="Mappa del sito" >
+						<img src="../img/map.png">
+					</a>
+					<a href= "guida_luoghi.html" title="Guida della pagina">
+						<img src="../img/help.png">
+					</a>
+					<a href= "#" class = "popup" title="Esci da UnknownPlayer" onclick="showExit ()">
+						<img src="../img/exit.png">
+                        <span class="popuptext" id="popupExit" style="display:block;">
+                            Sei sicuro di voler uscire?<br>
+                            <button class="exit" onclick="window.location.href='../index.html'">Si</button>
+                            <button class="exit" title="Rimani alla pagina">No</button>
+                        </span>
+					</a>
+				</div>
+				<div style="height:10%; padding-bottom:30vh"></div>
+			</div>
+				
+			<div class="divPrincipale">
+				<div class="indietroImg">
+					<a href="personaggi_luoghi.html">
+						<img src ="../img/dietroBianco.png" title="Torna al menu personaggi e luoghi">
+					</a>
+				</div>
+				
+				<div style="top:10%; bottom:90%; padding-left:26vw;  color:white; font-family:Typewrite; font-size:4vw;">	
+					Luoghi del gioco
+				</div>
+				<div>
+					
+					<div id="casa" class="tabcontent">
+						<h2>La tua casa</h2>
+						<b>
+							La tua casa è il luogo dove partirà il gioco.<br>
+							<img class="mappe" src="../img/mappe/mappaCasa.png"><br><br>
+							 Qui arriverà la chiamata del commissario Gordon, che avviserà il giocatore di un
+                             omicidio consumatosi nella vecchia fabbrica al porto.
+						</b>
+					</div>
+					<div id="fabbrica" class="tabcontent">
+						<h2>La vecchia fabbrica</h2>
+						<b>
+							Questo è il luogo dell'omicidio.<br>
+							<img class="mappe" src="../img/mappe/mappaFabbrica.png"><br><br>
+							Qui il personaggio troverà il cadavere della vittima attornato dagli agenti della polizia.
+						</b>
+					</div>
+					<div id="commissariato" class="tabcontent">
+						<h2>Il commissariato</h2>
+						<b>
+							Questo è il luogo dove avverranno gli interrogatori.<br>
+							<img class="mappe" src="../img/mappe/mappaCommissariato.png"><br><br>
+							Verranno interrogati i vari sospettati e si analizzeranno gli indizi trovati nella vecchia fabbrica.
+						</b>
+					</div>
+					<div id="porto" class="tabcontent">
+						<h2>Il porto</h2>
+						<b>
+							Questo è l'ultimo luogo visitabile dall'utente.<br>
+							<img class="mappe" src="../img/mappe/mappaPorto.png"><br><br>
+							Qui avverrà il livello finale in cui si scoprirà se l'indiziato arrestato è il vero colpevole oppure no. 
+						</b>
+					</div>
+					
+					<div class="tab" style="height:50vh;">
+						<button style="height:25%;" class="tablinks" onclick="openCity(event, 'casa')" id="defaultOpen" style="">
+							<b>La tua casa</b>
+						</button>
+						<button style="height:25%;" class="tablinks" onclick="openCity(event, 'fabbrica')">
+							<b>La vecchia fabbrica</b>
+						</button>
+						<button style="height:25%;" class="tablinks" onclick="openCity(event, 'commissariato')">
+							<b>Il commissariato</b>
+						</button>
+						<button style="height:25%;" class="tablinks" onclick="openCity(event, 'porto')">
+							<b>Il porto</b>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+	
+			<div class="divBarraLateraleDx">
+				<div style="height:10%; padding-bottom:15vh"></div>
+				<div style="height:80%;">
+					<a>
+						<img src="../img/pause.png" id="play" onclick="setPlay()" title = "Pausa">
+					</a>
+					<a title="Volume" >
+						<img src="../img/volume_on.png" id="Volume" onclick="setMute()">
+					</a>
+					<a href= "#" ><img src="../img/eggNo.png"></a>
+					<a href= "#" ><img src="../img/comandiNo.png"></a>
+					<a href= "#" ><img src="../img/creditiNo.png"></a>
+				</div>
+				<div style="height:10%; padding-bottom:25vh"></div>
+			</div>
+		</div>	
+		
+	</body>
+	<script>
+		var audio = document.getElementById("audioMenu");
+		audio.volume = 0.2;
+		
+		function setMute ()
+		{
+			var aud = document.getElementById("audioMenu");
+			var vol = document.getElementById("Volume");
+			
+			if (aud.muted == true)
+			{
+				vol.src = "../img/volume_on.png";
+				aud.muted = false;
+			}
+			else
+			{
+				vol.src = "../img/volume_off.png";
+				aud.muted = true;
+			}
+		}
+		
+		function setPlay()
+		{
+			var pause = document.getElementById("play");
+			if (pause.value == "pause")
+			{
+				audio.play();
+				pause.src = "../img/pause.png";
+				pause.value = "play";
+				pause.title = "Pausa";
+				console.log (pause.value);
+			}
+			else 
+			{
+				audio.pause();
+				pause.src = "../img/play.png";
+				pause.value = "pause";
+				pause.title = "Play";
+				console.log (pause.value);
+			}	
+		}
+		
+		function openCity(evt, cityName) 
+		{
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) 
+			{
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) 
+			{
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		document.getElementById("defaultOpen").click();
+        
+        //funzione per l'autoplay della musica
+        function autoplay ()
+        {
+            var audio=document.getElementById("audioMenu");
+            audio.volume = 0.2;
+    
+            audio.play ();
+        }
+        
+        function showExit () 
+        {
+            var popup = document.getElementById("popupExit");
+            popup.classList.toggle("show");
+        }
+	</script>
+	
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>UnknownPlayer</title>
+		<link href="css/guida.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="../img/icon.png">
+	</head>
+	
+	<body>
+		<div class="indietroImg">
+			<a href="personaggi_luoghi.html" title="Torna al menu personaggi e luoghi">
+				<img src ="../img/dietro.png">
+			</a>
+		</div>
+		
+		<div style="height:10%; width:80%; padding-left:35vw;  color:black; font-family:Typewrite; font-size:4vw;">	
+			MAPPA DEL SITO
+		</div>
+		<canvas id = "canvas" style = "border: 1px solid #000000; margin-left: auto; margin-right: auto; display: block; background-color: #4d4d4d;"></canvas>
+		
+	</body>
+    <script src="js/mappa.js"></script>
+    
+    <script>
+        
+        
+        setInterval(draw, 50);
+        
+        function draw ()
+        {
+            var mappa = document.getElementById("mappa");				    //carichiamo il canvas
+            var ctxMappa = canvas.getContext("2d");							// e carichiamo il suo contesto
+	
+            var dimWidth = window.innerWidth / 100;
+            var dimHeight = window.innerHeight / 100;
+    
+            ctxMappa.canvas.width = dimWidth * 80;
+            ctxMappa.canvas.height = dimHeight * 85;
+            
+            drawMap ();
+            
+            ctxMappa.font = "2vw Typewrite";
+            ctxMappa.fillStyle = "#4d94ff";
+            ctxMappa.fillText ("Personaggi", dimWidth*28.5, dimHeight*37);
+            ctxMappa.fillText (" e luoghi", dimWidth*28.5, dimHeight*40);
+            ctxMappa.fillRect (dimWidth*38.6, dimHeight*12.1, dimWidth*0.8, dimHeight*11);
+            ctxMappa.fillRect (dimWidth*33.1, dimHeight*23.1, dimWidth*6.3, dimHeight*1.8);
+            ctxMappa.fillRect (dimWidth*33.1, dimHeight*23.1, dimWidth*0.8, dimHeight*9.3);
+        }
+        
+    </script>
+</html>

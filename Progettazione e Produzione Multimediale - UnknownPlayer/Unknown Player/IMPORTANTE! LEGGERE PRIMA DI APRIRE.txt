@@ -1,0 +1,10 @@
+COMUNICAZIONI PER IL DOCENTE
+
+La pressione di due tasti direzionali è accettata all'interno dell'applicazione ma POTREBBE CAUSARE MALFUNZIONAMENTI per quanto riguarda le collisioni. 
+Pertanto, è FORTEMENTE SCONSIGLIATO il suo uso in prossimità di pareti, oggetti o NPC.
+
+E' probabile riscontrare dei problemi sulle COLLISIONI con il personaggio. Nel caso in cui ci si dovesse trovare nella condizione in cui 
+il personaggio rimane BLOCCATO IN UNA POSIZIONE, è suggerita la PRESSIONE DI UN TASTO OPPOSTO alla direzione corrente del personaggio 
+(per esempio premere PGGIU se il personaggio è rivolto verso l'alto)
+
+Risoluzione minima consigliata: 800x450

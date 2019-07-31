@@ -1,0 +1,7 @@
+In Google Chrome la funzione di autoplay non è impostata di default. 
+Questo perchè Chrome disattiva la funzione di autoplay per migliorare la sicurezza.
+Per impostare l'autoplay, copiare ed incollare il seguente link nella barra degli indirizzi di Chrome:
+
+chrome://flags/#autoplay-policy
+
+Selezionare l'impostazione a proprio piacimento ad eccezione della voce "Default"
