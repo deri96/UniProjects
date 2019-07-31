@@ -10,7 +10,4 @@ The request of the project is to create a system for managing an airport, namely
 (with their code, airline, airport of start or end, etc), flights, airports, and so on. In addition, the system can contain a 
 login function that can permit the access for flights operator.
 </p>
-<h3> Implementation<h3>
-<p>
 
-</p>
