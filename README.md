@@ -14,6 +14,6 @@ It consists of:
 </ul>
 </p>
 <p>
-For each of them there will be a separate README from which you can read the main notions 
+For each of them there is (or there will be, one day) a separate README from which you can read the main notions 
 on the project and the related explanations of any steps not commented on.
 </p>
